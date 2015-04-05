@@ -26,7 +26,7 @@ while true; do
 	read -p "Do you want to install MariaDB (LA[M]P)? Y/N:" yn
 	case $yn in
 	#add mariadb repo to system & update
-		[Yy]* ) echo -n "Installing & configuring" && cp MariaDB.repo etc/yum.repos.d/
+		[Yy]* ) echo -n "Installing & configuring" && cp MariaDB.repo etc/yum.repos.d; break;;
 #Install MariaDB
 yum update &&  yum install MariaDB-devel MariaDB-client MariaDB-server; break;;		
 		[Nn]* ) exit;;
